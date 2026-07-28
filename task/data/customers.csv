@@ -1,0 +1,4 @@
+customer_id,email,phone_hash,full_name,postcode,dob,region,tax_status,verified,verification_timestamp,version_number
+C001,alice@example.com,abc123,Alice Smith,500001,1995-04-10,South,Standard,true,2025-01-05,1
+c001,alice@example.com,abc123,Alice Smith,500001,1995-04-10,SOUTH,Standard,true,2025-02-10,2
+C002,bob@example.com,xyz456,Bob Kumar,600001,1990-08-15,North,Premium,true,2025-01-20,1

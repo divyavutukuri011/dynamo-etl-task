@@ -1,0 +1,87 @@
+name: dynamo-etl-task
+
+version: "1.0"
+
+category: Data Processing and ETL
+
+subcategory: Tabular transformation
+
+description: >
+  A large-scale ETL pipeline task involving customer entity resolution,
+  SCD Type-2 temporal joins, product transformation, FX conversion,
+  and financial reconciliation.
+
+task_type: data_transformation
+
+inputs:
+  - name: customers.csv
+name: dynamo-etl-task
+
+version: "1.0"
+
+category: Data Processing and ETL
+
+subcategory: Tabular transformation
+
+description: >
+  A large-scale ETL pipeline task involving customer entity resolution,
+  SCD Type-2 temporal joins, product transformation, FX conversion,
+  and financial reconciliation.
+
+task_type: data_transformation
+
+inputs:
+  - name: customers.csv
+    type: csv
+
+  - name: orders.csv
+    type: csv
+
+  - name: products.csv
+    type: csv
+
+  - name: fx_rates.csv
+    type: csv
+
+outputs:
+  - name: clean_sales.parquet
+    type: parquet
+
+  - name: validation_report.json
+    type: json
+
+evaluation:
+  verifier: verifier/verify.py    type: csv
+    description: Customer master data containing customer identities and attributes.
+
+  - name: orders.csv
+    type: csv
+    description: Transaction records containing order details and pricing information.
+
+  - name: products.csv
+    type: csv
+    description: Product catalogue data containing product attributes.
+
+  - name: fx_rates.csv
+    type: csv
+    description: Daily currency exchange rates.
+
+outputs:
+  - name: clean_sales.parquet
+    type: parquet
+    description: Cleaned and reconciled sales dataset.
+
+  - name: validation_report.json
+    type: json
+    description: Data quality and reconciliation validation report.
+
+evaluation:
+  verifier: verifier/verify.py
+
+requirements:
+  - Python 3.11
+  - pandas
+  - numpy
+  - pyarrow
+  - rapidfuzz
+

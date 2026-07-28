@@ -1,0 +1,8 @@
+
+order_id,customer_id,order_timestamp,product_id,quantity,unit_price,currency_code
+O001,C001,2025-02-15,P001,2,100,USD
+O002,c001,2025-03-01,P002,1,200,EUR
+O003,C002,2025-03-10,P001,3,50,USD
+O004,C003,2025-03-15,P003,5,25,USD
+
+
